@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFFFFF; /* Fondo del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #228B22; /* Color de la barra de desplazamiento */
+    border-radius: 10px;
+    border-right: 2px solid #FFFFFF; /* Borde a la derecha */
+}
+
+::-webkit-scrollbar-track {
+    /* Scrollbar horizontal (si se muestra) */
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-corner {
+    background: #FFFFFF;
+}
+
+
+
+/* Estilo para el encabezado */
+header {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+}
+.header-container {
+    background-color: #228B22;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilo para el menú */
+.menu {
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilo para el título "Curicó Turista" */
+.menu h1 {
+    margin-left: 20px; /* Elimina el margen por defecto que podría haber */
+}
+
+/* Estilo para la lista de opciones del menú */
+.menu ul {
+    list-style: none;
+    align-items: right;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mostrar elementos en línea */
+}
+
+/* Estilo para los elementos de la lista del menú */
+.menu li {
+    margin-right: 20px; /* Espacio entre elementos del menú */
+    align-items: right;
+}
+
+/* Eliminar margen derecho del último elemento del menú */
+.menu li:last-child {
+    margin-right: 20px;
+}
+/*Anñade un margen al primer elemento del menu para separar del Curico Turista*/
+.menu li:first-child {
+    align-items: right;
+
+}
+
+/* Estilo para los enlaces del menú */
+.menu a {
+    color: #FFFFFF; /* Color de texto predeterminado */
+    text-decoration: none;
+}
+
+/* Estilo para el menú desplegable en dispositivos móviles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        margin-top: 10px;
+        flex-direction: column; /* Apilar elementos en dispositivos móviles */
+    }
+
+    .menu li {
+        margin-right: 0; /* Eliminar el espacio entre elementos en dispositivos móviles */
+        margin-bottom: 10px; /* Espacio entre elementos apilados */
+    }
+}
+
+
+
+/* Estilo para el menú desplegable en dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    .menu ul {
+        margin-top: 10px;
+    }
+
+    .attraction {
+        max-width: 100%; /* Ancho máximo del 100% para dispositivos móviles */
+        margin-right: 0; /* Eliminamos el espacio entre las imágenes */
+        text-align: center; /* Centramos el contenido en dispositivos móviles */
+    }
+}
+
+/* Estilos para las secciones temáticas y atracciones */
+.attraction-section {
+    text-align: center; /* Centramos el contenido en la sección */
+    padding: 20px;
+    background-color: #F5F5F5; /* Color de fondo para las secciones */
+}
+
+.attraction-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Establecemos un ancho máximo para las imágenes y las centramos */
+.attraction {
+    max-width: 300px; /* Ancho máximo para las imágenes */
+    display: inline-block; /* Colocar las imágenes una al lado de la otra */
+    margin-right: 20px; /* Espacio entre las imágenes */
+    text-align: left; /* Alinear el texto a la izquierda */
+    transition: transform 0.3s ease; /* Animación de transformación al hacer hover */
+}
+
+/* Agregamos el efecto hover */
+.attraction:hover {
+    transform: scale(1.1); /* Aumentamos el tamaño al 110% al hacer hover */
+}
+
+.attraction img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón "Explora" */
+.btn {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #228B22; /* Verde Bosque */
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1B7C1B; /* Color de fondo al hacer hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para las categorías (inicialmente ocultas) */
+.categoria {
+    display: none;
+    /* Agrega estilos personalizados para las categorías */
+}

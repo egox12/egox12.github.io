@@ -1,0 +1,96 @@
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFFFFF; /* Fondo del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #228B22; /* Color de la barra de desplazamiento */
+    border-radius: 10px;
+    border-right: 2px solid #FFFFFF; /* Borde a la derecha */
+}
+
+::-webkit-scrollbar-track {
+    /* Scrollbar horizontal (si se muestra) */
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-corner {
+    background: #FFFFFF;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para el encabezado de la página de sugerencias */
+header {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centramos el contenido horizontalmente */
+    align-items: center;
+}
+
+/* Estilos para el formulario de sugerencias */
+main {
+    padding: 20px;
+    text-align: center; /* Centramos el contenido en la página */
+}
+
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centramos el formulario horizontalmente */
+    padding: 20px;
+    background-color: #F5F5F5; /* Color de fondo para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del formulario */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #1B7C1B; /* Color de fondo al hacer hover */
+}
+
+/* Estilo para el link "Volver al Inicio" */
+.menu {
+    text-align: center; /* Centramos el contenido en la página */
+}
+
+.menu a {
+    color: #228B22; /* Color verde bosque */
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #1B7C1B; /* Cambiamos el color al hacer hover */
+}
+footer {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    text-align: center;
+    padding: 10px 0;
+}

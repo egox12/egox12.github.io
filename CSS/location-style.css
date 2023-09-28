@@ -1,0 +1,151 @@
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFFFFF; /* Fondo del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #228B22; /* Color de la barra de desplazamiento */
+    border-radius: 10px;
+    border-right: 2px solid #FFFFFF; /* Borde a la derecha */
+}
+
+::-webkit-scrollbar-track {
+    /* Scrollbar horizontal (si se muestra) */
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-corner {
+    background: #FFFFFF;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: #228B22;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.back-to-home a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 400px; /* Ancho del carrusel ajustado al tamaño de tus imágenes */
+    margin: 0 auto;
+}
+.carousel-image {
+    width: 1000px; /* Aumenta el ancho de las imágenes */
+    height: 800px; /* Aumenta el alto de las imágenes */
+    object-fit: cover; /* Esto mantiene la proporción de aspecto y recorta las imágenes si es necesario */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Ancho de cada imagen igual al ancho del carrusel */
+    margin-right: 10px; /* Espacio entre imágenes */
+}
+
+.carousel-item img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+}
+
+
+/* Estilos para los botones de navegación */
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-slide {
+    left: 0;
+}
+
+.next-slide {
+    right: 0;
+}
+
+
+/* Estilos adicionales para las flechas (puedes personalizarlos) */
+.prev-slide:hover,
+.next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Descripción del lugar */
+.place-description {
+    margin-top: 20px;
+}
+
+/* Mapa de Google */
+.map-container {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporción 16:9 para el iframe */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.place-map {
+    width: 100%;
+    height: 400px; /* Ajusta la altura según tus preferencias */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.place-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    background-color: #228B22; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto */
+    text-align: center;
+    padding: 10px 0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/location-style.css">
+    <link rel="icon" href="img/logo_cco_turista-removebg-preview.png" type="icon">
+    <title>Nombre del Lugar - Curicó Turista</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="back-to-home">
+                <a href="index.html">Volver al Inicio</a>
+            </div>
+            <h1>Almibar</h1>
+        </div>
+    </header>
+
+<!-- ... (código previo) ... -->
+
+<main>
+    <div class="place-info">
+        <div class="place-images">
+            <!-- Carrusel de imágenes con flechas de navegación -->
+            <div class="carousel">
+                <button class="prev-slide">&#10094;</button>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="img/CCÓ/almibar1.jpeg" alt="almibar 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/CCÓ/almibar2.jpg" alt="almibar 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/CCÓ/almibar3.jpg" alt="almibar 3">
+                    </div>
+                <button class="next-slide">&#10095;</button>
+            </div>
+        </div>
+        <div class="place-description">
+        </div>
+    </div>
+
+    <div class="map-container">
+        <!-- Google Maps iframe con la ubicación del lugar -->
+            <div class="place-map">
+                <iframe src="https://maps.app.goo.gl/BtTp1pKpYQAnqMwv6"></iframe>
+            </div>
+    </div>
+</main>
+
+<!-- ... (código posterior) ... -->
+
+
+    <footer>
+        &copy; 2023 Curicó Turista. Todos los derechos reservados.
+    </footer>
+    <script>
+        // JavaScript para el carrusel con flechas
+const prevButton = document.querySelector('.prev-slide');
+const nextButton = document.querySelector('.next-slide');
+const carousel = document.querySelector('.carousel-inner');
+let currentIndex = 0;
+
+// Función para avanzar a la siguiente imagen
+function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= carousel.children.length) {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}
+
+// Función para retroceder a la imagen anterior
+function prevSlide() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = carousel.children.length - 1;
+    }
+    updateCarousel();
+}
+
+// Función para actualizar la visualización del carrusel
+function updateCarousel() {
+    for (let i = 0; i < carousel.children.length; i++) {
+        if (i === currentIndex) {
+            carousel.children[i].style.display = 'block';
+        } else {
+            carousel.children[i].style.display = 'none';
+        }
+    }
+}
+
+// Agregar eventos de clic a las flechas
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+// Inicializar el carrusel
+updateCarousel();
+
+    </script>
+    
+</body>
+
+</html>

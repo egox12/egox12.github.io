@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/sugerencias-style.css">
+    <link rel="icon" href="img/logo cco turista.png" type="image/svg">
+    <title>Sugerencias - Curicó Turista</title>
+</head>
+<body>
+    <header>
+        <h1>¡Envíanos tus sugerencias!</h1>
+    </header>
+
+    <main>
+        <form action="enviar_sugerencia.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sugerencia">Sugerencia:</label>
+            <textarea id="sugerencia" name="sugerencia" rows="4" required></textarea>
+
+            <button type="submit">Enviar Sugerencia</button>
+        </form>
+        <div class="menu">
+            <ul>
+                <a href="index.html">Volver al Inicio</a>
+                <!-- Agrega más opciones de actividades aquí si es necesario -->
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Curicó Turista. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
